@@ -68,7 +68,7 @@ public class DocumentManager {
   }
 
   private boolean matchesTitlePrefixes(Document doc, List<String> prefixes) {
-    return prefixes.stream().allMatch(prefix -> doc.getTitle().contains(prefix));
+    return prefixes.stream().allMatch(prefix -> doc.getTitle().startsWith(prefix));
   }
 
   private boolean matchesContent(Document doc, List<String> contents) {
